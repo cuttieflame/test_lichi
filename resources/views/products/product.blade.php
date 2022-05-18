@@ -2,8 +2,7 @@
 <body>
 <ul class="list" style="max-width:500px;">
     @foreach ($groups as $product)
-        <li onclick='send("{{$product->id}}")'>{{ $product->name }}
-            {{$product->id}}
+        <li id="sub-list{{$product->id}}" onclick='send("{{$product->id}}")'>{{ $product->name }}
         <ul class="sub-list" id="sub-list{{$product->id}}">
             @foreach ($product->childrenProducts as $childCategory)
                 @include('products.child_category', ['child_category' => $childCategory])
@@ -55,9 +54,6 @@
         }
 
     }
-    console.log(text);
-    let a = document.getElementById('sub-list1').childNodes.length;
-    // document.getElementById('sub-list1').innerHTML = a;
     $('.list li').on('click', function(e) {
          e.stopPropagation();
          var subList = $(this).children('.sub-list');

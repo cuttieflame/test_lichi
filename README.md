@@ -1,8 +1,8 @@
 HOW TO DEPLOY
 
-docker compose up -d
-php artisan migrate
-php artisan db:seed
+docker compose up -d <br>
+php artisan migrate <br>
+php artisan db:seed <br>
 
 создайте файл .env и скопируйте все из .env.example
 DB_CONNECTION=mysql

@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_group')->nullable();
+            $table->foreign('id_group')->references('id')->on('groups');
+            $table->integer('id_group');
             $table->timestamps();
         });
     }

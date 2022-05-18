@@ -11,3 +11,6 @@ DB_PORT=3306
 DB_DATABASE=root
 DB_USERNAME=lichirus
 DB_PASSWORD=12345
+
+задание 1 в файле zadanie1.php
+задание 2 в файле zadanie2.php

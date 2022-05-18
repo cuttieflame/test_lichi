@@ -19,5 +19,4 @@ interface ProductInterface
      * @return mixed
      */
     public function products(Request $request): mixed;
-    public function test();
 }

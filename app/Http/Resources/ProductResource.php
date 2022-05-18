@@ -2,17 +2,22 @@
 
 namespace App\Http\Resources;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use JetBrains\PhpStorm\ArrayShape;
 
+/**
+ *
+ */
 class ProductResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
+     * @param  Request  $request
+     * @return array
      */
-    public function toArray($request)
+    #[ArrayShape(['id' => "mixed", 'id_parent' => "mixed", 'name' => "mixed", 'childrenProducts' => "array", 'products' => "mixed"])] public function toArray($request): array
     {
 //        function func($arr)
 //        {

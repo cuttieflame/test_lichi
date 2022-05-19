@@ -28,7 +28,7 @@ class UserController extends Controller implements UserInterface
      * @param UserServiceInterface $userService
      * @return void
      */
-    public function __constructor(UserServiceInterface $userService) {
+    public function __construct(UserServiceInterface $userService) {
         $this->userService = $userService;
     }
 
